@@ -1,22 +1,145 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import "../../src/styles/global.css";
+import StatCircle from "../components/StatCircle.astro";
+import Section from "../components/Section.astro";
 ---
 
-<Layout>	
-	<h1>Thank you from the Menopause @ Work team </h1>
-	<p>The <span style="font-weight: bold;">Menopause @ Work</span> pilot programme is now closed.</p>   
-	<p>We would like to extend our sincere thanks to everyone who has been involved. Whether you participated in one of our online courses or in-person workshops over the past three years, we deeply appreciate your engagement and support. For ongoing local support for those experiencing menopause symptoms at work, or for those supporting colleagues, please contact Brighton & Hove City Council's Healthy Lifestyles Team:</p>
-	<p>
-		<span style="font-weight: bold;">Email</span> <a href="mailto:healthylifestyles@brighton-hove.gov.uk">healthylifestyles@brighton-hove.gov.uk</a>
-		<br />
-		<span style="font-weight: bold;">Website</span>  <a href="https://www.brighton-hove.gov.uk/directory-entry/healthy-lifestyles-team">https://www.brighton-hove.gov.uk/directory-entry/healthy-lifestyles-team</a></p>
-	</p>
-	<p>For national advice and additional information, visit the following resources:</p>
-	<ul>
-		<li><a href="https://www.menopausematters.co.uk/" target="_blank">Menopause Matters - menopausal symptoms, remedies, advice</a></li>
-		<li><a href="https://www.menopause-exchange.co.uk/" target="_blank">The Menopause Exchange</a></li>
-	</ul>
-	<p>If you have attended one of our events, or engaged in our training, your personal data will be removed in accordance with our <a href="/privacy-policy">privacy policy</a>.</p>
-	<p>Please note that the info@menopauseatwork.co.uk email address is no longer active or monitored. 
-		For any further inquiries about the closed programme, please visit and contact us via the Here website: <a href="https://hereweare.org.uk/" target="_blank">Healthcare Delivery & Innovations - Here</a></p>
+<Layout>
+  <div class="flex flex-col gap-8 items-start justify-center w-full">
+    <Section class="max-w-6xl">
+      <div class="w-full pb-8">
+        <h1 class="text-center text-2xl">
+          Thank you from the Menopause @ Work team
+        </h1>
+      </div>
+    </Section>
+    <Section>
+      <p>
+        The <span class="font-bold">Menopause @ Work</span> pilot programme is now
+        closed.
+      </p>
+      <p>
+        We would like to extend our sincere thanks to everyone who has been
+        involved. Whether you participated in one of our online courses or
+        in-person workshops over the past three years, we deeply appreciate your
+        engagement and support.
+      </p>
+    </Section>
+    <Section>
+      <p>
+        Across the three years, with the support, input and feedback from the
+        local SME community we have made real impact:
+      </p>
+      <div class="py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <StatCircle
+            percentage="94"
+            text="of participants reported increased confidence in discussing menopause"
+          />
+          <StatCircle
+            percentage="93"
+            text="of workplaces gained a better understanding of how to support people experiencing menopause"
+          />
+          <StatCircle
+            percentage="89"
+            text="of workplaces intend to take action based on what they learned"
+          />
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-20 py-10 italic max-w-3xl mx-auto">
+        {
+          [1, 2, 3, 4].map((i) => (
+			<div class="flex flex-col items-center justify-center">
+				<blockquote class="p-4 relative">
+				<div class="absolute rotate-180 text-[#289DD2] -top-8 -left-4 opacity-15 size-20">
+					<svg
+					role="img"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					width="100%"
+					height="100%"
+					>
+					<path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2c1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1m12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1"
+					/>
+					</svg>
+				</div>
+				<p>
+					<span class="font-bold">
+					I feel more confident to talk about menopause and how it
+					affects me. I'm going to tell all my friends about this"
+					</span>
+				</p>
+				</blockquote>
+			</div>
+          ))
+        }
+      </div>
+	</Section>
+
+      <Section class="w-full">
+        <h2>Ongoing Local Support</h2>
+        <p>
+          For ongoing local support for those experiencing menopause symptoms at
+          work, or for those supporting colleagues, please contact Brighton &
+          Hove City Council's Healthy Lifestyles Team via:
+        </p>
+        <p>
+          <span class="font-bold">Email</span>
+          <a href="mailto:healthylifestyles@brighton-hove.gov.uk"
+            >healthylifestyles@brighton-hove.gov.uk</a
+          >
+          <br />
+          <span class="font-bold">Website</span>
+          <a
+            href="https://www.brighton-hove.gov.uk/directory-entry/healthy-lifestyles-team"
+            >https://www.brighton-hove.gov.uk/directory-entry/healthy-lifestyles-team</a
+          >
+        </p>
+      </Section>
+      <Section>
+        <h2>Ongoing Local Support</h2>
+        <p>
+          For national advice and additional information, visit the following
+          resources:
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.menopausematters.co.uk/" target="_blank"
+              >Menopause Matters - menopausal symptoms, remedies, advice</a
+            >
+          </li>
+          <li>
+            <a href="https://www.menopause-exchange.co.uk/" target="_blank"
+              >The Menopause Exchange</a
+            >
+          </li>
+        </ul>
+      </Section>
+      <Section>
+        <p>
+          If you have attended one of our events, or engaged in our training,
+          your personal data will be removed in accordance with our <a
+            href="/privacy-policy">privacy policy</a
+          >.
+        </p>
+        <p>
+          Please note that the info@menopauseatwork.co.uk email address is no
+          longer active or monitored. For any further inquiries about the closed
+          programme, please visit and contact us via the Here website: <a
+            href="https://hereweare.org.uk/"
+            target="_blank">Healthcare Delivery & Innovations - Here</a
+          >
+        </p>
+      </Section>
+    </Section>
+  </div>
 </Layout>
