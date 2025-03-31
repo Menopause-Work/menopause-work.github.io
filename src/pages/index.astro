@@ -60,6 +60,7 @@ import Section from "../components/Section.astro";
         </div>
       </div>
       <div class="max-w-3xl lg:max-w-4xl">
+        <!-- <h3 class="text-center text-xl">Quotes from Project Participants</h3> -->
         <div
           class="grid grid-cols-1 sm:grid-cols-12 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2 md:grid-rows-1 gap-4 sm:gap-x-0 md:gap-x-4"
         >
@@ -67,12 +68,15 @@ import Section from "../components/Section.astro";
             [
               {
                 text: "It really kickstarted the process for us. We're now actively working on a menopause policy, and looking at practical ways to support staff, like uniform adjustments and flexible breaks",
+                author: "(Project Participant)"
               },
               {
                 text: "The training has given me the confidence and knowledge to have conversations with staff about menopause […] As a team, we're having more of these conversations - I think staff feel more confident to approach me now, knowing I have a good understanding",
+                author: "(Project Participant)"
               },
               {
                 text: "Investing in menopausal staff isn't just the right thing to do—it makes financial sense. Small changes, like lighter uniforms or flexible breaks, can have a big impact on keeping people in work",
+                author: "(Project Participant)"
               },
             ].map((quote, i) => {
               const gridItemClass = (
@@ -102,9 +106,10 @@ import Section from "../components/Section.astro";
                         />
                       </svg>
                     </div>
-                    <p>
-                      <span class="font-bold">{`${quote.text}"`}</span>
-                    </p>
+                    <div class="italic">
+                      <p class="font-bold mb-2">{`${quote.text}"`}</p>
+                      <p>{quote.author}</p>
+                    </div>
                   </blockquote>
                 </div>
               )
