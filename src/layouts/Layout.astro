@@ -17,14 +17,17 @@ import Section from "../components/Section.astro";
   </head>
   <body class="text-[#4b5563] text-lg margin-0 selection:bg-[#41C1BA]">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
-	<header class="container mx-auto px-4 py-4">
-		<nav class="pb-20 w-full">
-		  <div class="navbar">
-			<a href="/"
-			  ><img
+	<header class="lg:container mx-auto px-4 py-4">
+		<nav class="pb-8 sm:pb-10 w-full">
+		  <div class="flex flex-col gap-4 sm:flex-row w-full justify-between items-center">
+			<a 
+				href="/"
+				class="w-52"
+
+			><img
 				src={menopauseAtWork.src}
-				width="200"
 				alt="Homepage"
+				class="w-full"
 			  /></a
 			>
 			<div class="links">
